@@ -1,5 +1,5 @@
 {
-  "name": "wanda",
+  "name": "@wanda-dev/react",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
