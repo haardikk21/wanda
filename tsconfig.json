@@ -5,17 +5,20 @@
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
+    "declaration": true,
+    "declarationMap": true,
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
-    "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": false,
     "strict": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "types": ["node"]
+    "types": ["node"],
+    "outDir": "./dist"
   },
-  "include": ["./src"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
