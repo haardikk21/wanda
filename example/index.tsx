@@ -2,8 +2,7 @@ import React from 'react'
 import * as ReactDOMClient from 'react-dom/client'
 
 import { App } from './app'
-import { Provider } from '../src/context'
-import { InjectedConnector } from '../src'
+import { InjectedConnector, Provider } from '@wanda-dev/react'
 
 const root = ReactDOMClient.createRoot(document.getElementById('root')!)
 

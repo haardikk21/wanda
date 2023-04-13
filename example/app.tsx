@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react'
 
-import { useCompletion, useConnect, useModel } from '../src'
+import { useCompletion, useConnect, useModel } from '@wanda-dev/react'
 
 export const App = () => {
   const [{ connectors, error }, connect] = useConnect()
