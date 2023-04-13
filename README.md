@@ -3,7 +3,7 @@
 **wanda** is a collection of React Hooks to get you up and running with keyless AI in a matter of minutes.
 
 ```
-npm install wanda
+npm install @wanda-dev/react
 ```
 
 ## Features
