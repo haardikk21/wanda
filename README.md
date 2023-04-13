@@ -72,6 +72,7 @@ This is the main hook you will be using. It provides a function to request the c
 ```tsx
 export function MyComponent() {
   const { getCompletion } = useCompletion()
+  const [prompt, setPrompt] = useState('')
   const [output, setOutput] = useState('')
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
