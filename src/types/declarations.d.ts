@@ -1,5 +1,7 @@
 import {
   CompletionOptions,
+  ErrorCode,
+  EventType,
   Input,
   MessageOutput,
   ModelID,
@@ -13,6 +15,9 @@ interface WindowAiProvider {
     input: T,
     options?: CompletionOptions<T>,
   ): Promise<T extends PromptInput ? TextOutput : MessageOutput>
+  addEventListener?<T>(
+    handler: (event: EventType, data: T | ErrorCode) => void,
+  ): string
 }
 
 declare global {

@@ -21,6 +21,11 @@ export type MessageOutput = {
   message: Message
 }
 
+export enum EventType {
+  ModelChanged = 'model_changed',
+  Error = 'error',
+}
+
 export enum ErrorCode {
   NotAuthenticated = 'NOT_AUTHENTICATED',
   PermissionDenied = 'PERMISSION_DENIED',

@@ -28,6 +28,21 @@ export const Provider: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   const [state, setState] = React.useState<State>({})
 
+  React.useEffect(() => {
+    if (!state.connector) return
+
+    const handleChange = (data: Data) => {
+      setState((state) => ({ ...state, data }))
+    }
+
+    state.connector.on('change', handleChange)
+
+    return () => {
+      if (!state.connector) return
+      state.connector.off('change', handleChange)
+    }
+  }, [state.connector])
+
   // Close connectors when unmounting
   React.useEffect(() => {
     return () => {
@@ -35,9 +50,6 @@ export const Provider: React.FC<React.PropsWithChildren<Props>> = ({
       state.connector.deactivate()
     }
   }, [state.connector])
-
-  // TODO: Watch connectors for changes
-  // Update when upstream includes emits
 
   const value = [
     {
